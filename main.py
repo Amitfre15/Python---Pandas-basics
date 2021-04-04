@@ -10,11 +10,13 @@ def main(argv):
     # seasons = [2,3]
     # s = set(seasons)
     # data.filter_by_feature(data, "season", s)
-    data.print_details(the_data, ["cnt"], statistic_functions)
-    pass
+    #data.print_details(the_data, ["cnt"], statistic_functions)
+    summer_data = data.filter_by_feature(the_data,"season",[1])
+    print("Question 1:")
+    print("Summer:")
+    data.print_details(summer_data, ["hum","t1","cnt"], statistic_functions)
+
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     main(sys.argv)
-
-

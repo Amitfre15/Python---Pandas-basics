@@ -1,5 +1,5 @@
 import pandas
-
+#import statistics
 
 def load_data(path, features):
     df = pandas.read_csv(path, usecols=features)
@@ -22,9 +22,12 @@ def filter_by_feature(data, feature, values):
         else:
             for key in data.keys():
                 data2[key].append(data[key][index])
+    return data1
 
 
 def print_details(data, features, statistic_functions):
     for key in features:
-        for func in statistic_functions:
-            print(func(data[key]))
+        begin = str(key) + ":"
+        # for func in statistic_functions:
+        # print(func(data[key]))
+        print(begin, statistic_functions[0](data[key]), statistic_functions[1](data[key]), statistic_functions[2](data[key]))
