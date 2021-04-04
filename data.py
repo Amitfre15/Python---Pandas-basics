@@ -1,11 +1,9 @@
 import pandas
-#import statistics
+
 
 def load_data(path, features):
     df = pandas.read_csv(path, usecols=features)
-    #print(df)
     data = df.to_dict(orient="list")
-    # print(data)
     return data
 
 
@@ -22,12 +20,14 @@ def filter_by_feature(data, feature, values):
         else:
             for key in data.keys():
                 data2[key].append(data[key][index])
-    return data1
+    return data1, data2
 
 
 def print_details(data, features, statistic_functions):
     for key in features:
-        begin = str(key) + ":"
-        # for func in statistic_functions:
-        # print(func(data[key]))
-        print(begin, statistic_functions[0](data[key]), statistic_functions[1](data[key]), statistic_functions[2](data[key]))
+        print(key + ":", end=" ")
+        for func in range(len(statistic_functions)):
+            if func == len(statistic_functions)-1:
+                print(statistic_functions[func](data[key]))
+                continue
+            print(statistic_functions[func](data[key]), end=", ")
