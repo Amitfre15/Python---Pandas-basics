@@ -1,0 +1,44 @@
+if t1<=13.0, then:
+Winter holiday records:
+cnt: 494.57575757575756, 343 X4
+Winter weekday records:
+cnt: 818.1259659969088, 616 X1.5
+if t1>13.0, then:
+Winter holiday records:
+cnt: 1232.3333333333333, 1351
+Winter weekday records:
+cnt: 993.5855263157895, 912
+
+
+if t1<=10.0, then:
+Winter holiday records:
+cnt: 446.4074074074074, 330 X2.5
+Winter weekday records:
+cnt: 802.9277578913114, 589 X1.3
+if t1>10.0, then:
+Winter holiday records:
+cnt: 885.0, 809
+Winter weekday records:
+cnt: 908.0125786163522, 763
+
+if t1<=7.0, then:
+Winter holiday records:
+cnt: 430.11764705882354, 334 X1.5
+Winter weekday records:
+cnt: 760.2708747514911, 506 X1.5 
+if t1>7.0, then:
+Winter holiday records:
+cnt: 668.7368421052631, 520
+Winter weekday records:
+cnt: 896.2051517939283, 754
+
+if t1<=4.0, then:
+Winter holiday records:
+cnt: 240.05882352941177, 187 X 2.8
+Winter weekday records:
+cnt: 663.1309130913091, 343 X2.2
+if t1>4.0, then:
+Winter holiday records:
+cnt: 653.7272727272727, 526
+Winter weekday records:
+cnt: 877.3967043027159, 729

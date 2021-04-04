@@ -3,6 +3,9 @@ import data
 from statistics import sum, mean, median, population_statistics
 
 
+THRESHOLD = 13.0
+
+
 def main(argv):
     features = (argv[2].split(sep=", "))
     the_data = data.load_data(argv[1], features)
@@ -19,14 +22,14 @@ def main(argv):
 
     # Question 2
     print("\nQuestion 2")
-    print("if t1<=13.0, then:")
+    print("If t1<=13.0, then:")
     winter_data, not_winter = data.filter_by_feature(the_data, "season", [3])
     w_h_data, not_w_h_data = data.filter_by_feature(winter_data, "is_holiday", [1])
-    population_statistics("Winter holiday records:", w_h_data, "t1", ["cnt"], 13.0, 0, statistic_functions[1:])
-    population_statistics("Winter weekday records:", not_w_h_data, "t1", ["cnt"], 13.0, 0, statistic_functions[1:])
-    print("if t1>13.0, then:")
-    population_statistics("Winter holiday records:", w_h_data, "t1", ["cnt"], 18.0, 1, statistic_functions[1:])
-    population_statistics("Winter weekday records:", not_w_h_data, "t1", ["cnt"], 18.0, 1, statistic_functions[1:])
+    population_statistics("Winter holiday records:", w_h_data, "t1", ["cnt"], THRESHOLD, 0, statistic_functions[1:])
+    population_statistics("Winter weekday records:", not_w_h_data, "t1", ["cnt"], THRESHOLD, 0, statistic_functions[1:])
+    print("If t1>13.0, then:")
+    population_statistics("Winter holiday records:", w_h_data, "t1", ["cnt"], THRESHOLD, 1, statistic_functions[1:])
+    population_statistics("Winter weekday records:", not_w_h_data, "t1", ["cnt"], THRESHOLD, 1, statistic_functions[1:])
 
 
 # Press the green button in the gutter to run the script.
