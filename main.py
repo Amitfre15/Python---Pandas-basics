@@ -7,10 +7,18 @@ THRESHOLD = 13.0
 
 
 def main(argv):
+    """ Calculates and prints statistic values for features of records from the data
+        collected in london.csv file.
+
+        Keyword arguments:
+        argv -- list of arguments supplied (file to run, csv file address, features to get from the csv)
+    """
     # Question 1
+    # Saves the features given in a list
     features = (argv[2].split(sep=", "))
     the_data = data.load_data(argv[1], features)
     statistic_functions = [sum, mean, median]
+    # Saves the relevant records
     summer_data, not_summer = data.filter_by_feature(the_data, "season", [1])
     holiday_data, not_holiday = data.filter_by_feature(the_data, "is_holiday", [1])
     print("Question 1:")
@@ -24,6 +32,7 @@ def main(argv):
     # Question 2
     print("\nQuestion 2")
     print("If t1<=13.0, then:")
+    # Saves the relevant records
     winter_data, not_winter = data.filter_by_feature(the_data, "season", [3])
     w_h_data, not_w_h_data = data.filter_by_feature(winter_data, "is_holiday", [1])
     population_statistics("Winter holiday records:", w_h_data, "t1", ["cnt"], THRESHOLD, 0, statistic_functions[1:])
