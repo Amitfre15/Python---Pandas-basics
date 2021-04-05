@@ -16,8 +16,8 @@ def mean(values):
 def median(values):
     sorted_values = sorted(values)
     if len(sorted_values) % 2 == 0:
-        return sorted_values[int(len(sorted_values) / 2 + 1)]
-    return sorted_values[math.ceil(len(sorted_values) / 2)]
+        return (sorted_values[int(len(sorted_values) / 2) - 1] + sorted_values[int(len(sorted_values) / 2)]) / 2
+    return sorted_values[int(len(sorted_values) / 2)]
 
 
 def population_statistics(feature_description, data, treatment, target, threshold, is_above, statistic_functions):

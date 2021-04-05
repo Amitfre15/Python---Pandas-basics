@@ -7,6 +7,7 @@ THRESHOLD = 13.0
 
 
 def main(argv):
+    # Question 1
     features = (argv[2].split(sep=", "))
     the_data = data.load_data(argv[1], features)
     statistic_functions = [sum, mean, median]
