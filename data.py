@@ -4,9 +4,10 @@ import pandas
 def load_data(path, features):
     """ Loads the supplied features from a csv file into a dataframe, converts it to a dictionary and returns it.
 
-        Keyword arguments:
+        :parameters:
         path -- csv file address
         features -- list of features to load from the file
+        :returns: requested dictionary
     """
     df = pandas.read_csv(path, usecols=features)
     data = df.to_dict(orient="list")
@@ -16,12 +17,12 @@ def load_data(path, features):
 def filter_by_feature(data, feature, values):
     """ Splits the dictionary to 2, one will hold only records in which the feature's value is included
         in the values list, the other will hold all the other records.
-        Returns both dictionaries.
 
-        Keyword arguments:
+        :parameters:
         data -- a dictionary to filter
         feature -- the feature by which we'll filter
         values -- list of values to filter by (only those values will stay in the dictionary)
+        :returns: both dictionaries
     """
     # declaration and initiation of empty dictionaries
     data1 = {}
@@ -44,10 +45,11 @@ def filter_by_feature(data, feature, values):
 def print_details(data, features, statistic_functions):
     """ Prints statistic values of supplied features from the dictionary
 
-        Keyword arguments:
+        :parameters:
         data -- the dictionary according to which the statistical values are determined
         features -- list of features to print their statistical values
         statistic_functions -- list of statistic functions in which we're interested
+        :returns: None
     """
     for key in features:
         # Print each feature's values in one row

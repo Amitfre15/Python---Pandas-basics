@@ -10,8 +10,9 @@ def main(argv):
     """ Calculates and prints statistic values for features of records from the data
         collected in london.csv file.
 
-        Keyword arguments:
+        :parameter:
         argv -- list of arguments supplied (file to run, csv file address, features to get from the csv)
+        :returns: None
     """
     # Question 1
     # Saves the features given in a list

@@ -27,7 +27,7 @@ def population_statistics(feature_description, data, treatment, target, threshol
         the threshold supplied (according to is_above argument value).
         Prints statistic values of the target feature from the filtered dictionary.
 
-        Keyword arguments:
+        :parameters:
         feature_description -- a description of the records in data
         data -- the dictionary to filter from
         treatment -- a feature to filter by
@@ -35,6 +35,7 @@ def population_statistics(feature_description, data, treatment, target, threshol
         threshold -- a value to filter treatment's values by
         is_above -- boolean, determines whether to filter the values above threshold the opposite
         statistic_functions -- list of statistic functions in which we're interested
+        :returns: None
     """
     data1 = {}
     for key in data.keys():
