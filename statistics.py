@@ -2,7 +2,7 @@ from data import print_details
 
 
 def sum(values):
-    """Return the summary of the values list."""
+    """Return the summary of the values list.  """
     summary = 0
     for index in range(len(values)):
         summary += values[index]
